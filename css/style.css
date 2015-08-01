@@ -1,0 +1,211 @@
+@font-face 
+{
+	font-family: OpenSans; /* Гарнитура шрифта */
+	src: url(../fonts/open-sans.ttf); /* Путь к файлу со шрифтом */
+}
+   
+body
+{
+	font-family: 'OpenSans', arial;
+}
+
+.no_a a
+{
+	text-decoration: none;
+	outline: none;
+}
+
+.container-fluid
+{
+	padding: 0px;
+}
+
+.head
+{
+	height: 100px;
+	background: #fff;
+}
+
+.head .row
+{
+	position: relative;
+	top: 29px;
+}
+
+.head .row > div
+{
+	height: 39px;
+}
+ 
+.head .logo a
+{
+	/*background: url(../img/logo.png) no-repeat;*/
+}
+
+.head .more_info
+{
+	font-size: 12px;
+	padding: 0px;
+	padding-top: 12px;
+}
+
+.head .more_info a
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+}
+
+.content .slider
+{
+	background: url(../img/slider/1.jpg) no-repeat center;
+	height: 782px;
+}
+
+.content .slider .forms
+{
+	width: 470px;
+	margin-top: 30px;
+	background: url(../img/form_background.png);	
+	color:#fff;
+	padding: 0px 15px 30px;
+}
+
+.content .slider .forms .recov
+{
+	position: relative;
+	top: -31px;
+	float: right;
+	margin-bottom: -20px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.content .slider .forms .mess 
+{
+	
+	font-size: 16px;
+	margin: 30px 0px 25px;
+}
+
+
+.content .slider .forms .name_user_1
+{
+	padding-right: 7px !important;
+	padding-left: 0px !important;
+}
+
+.content .slider .forms .name_user_2
+{
+	padding-right: 0px !important;
+	padding-left: 7px !important;
+}
+
+.content .slider .forms h2
+{
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.content .slider .forms p span
+{
+	text-decoration: underline;	
+}
+
+.content .slider .forms p 
+{
+	margin-top: -15px;
+	font-size: 30px;
+}
+
+
+.content .slider .forms button
+{
+	width: 100%;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.content .slider .forms .checkbox
+{
+	font-size: 12px;
+}
+
+.content .slider .forms .checkbox label
+{
+	padding-left: 0px;
+}
+
+.content .slider .forms input[type="checkbox"] 
+{ 
+	display:none; 
+}
+
+.content .slider .forms input[type="checkbox"] + label span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    margin: -1px 4px 0 0;
+    background: url(../img/checkbox.png) no-repeat 0 0;
+    cursor: pointer;
+    }
+
+.content .slider .forms input[type="checkbox"]:checked + label span {
+    background: url(../img/checkbox.png) no-repeat 0px -12px;
+}
+
+.footer
+{
+	padding: 30px 0px 10px;
+}
+
+.row
+{
+	margin: 0px;
+}
+
+.footer .row > div
+{
+	padding: 0px;
+}
+
+.footer .info_1, .footer .info_3
+{
+	font-size: 11px;
+}
+
+ .footer .info_3 p
+ {
+	margin-top: 10px;
+ }
+ 
+
+ .footer .info_2 
+ {	
+  text-align: right;
+ }
+ 
+@media screen and (max-device-width: 768px)	
+	{
+			.footer .info_2 , .footer .info_1, .footer .info_3, .head .more_info, .head .logo {text-align: center; }
+			
+			.content .slider .forms { width: 100%; }
+	}
+	
+	
+ .footer .info_2 span
+ {
+	font-size: 18px;
+ }
+ 
+ .footer .info_2 p
+ {
+	font-size: 12px;
+	margin-top: 5px;
+	cursor: pointer;
+	text-decoration: underline;	
+ }
+
+
+/*маргин у роу убрать в полдвале, так как он отрицательные и портит все*/

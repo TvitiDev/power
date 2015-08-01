@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+		<meta name="viewport" content="width=992, initial-scale=1"> 
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>POWER</title>
+
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style_back.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+<body>
+	
+	<div class="container-fluid">
+		
+		<div class='head'>
+			<div class='row'>
+				<div class='col-xs-12 col-sm-6 col-md-7 block_1'>
+					<div  onclick='left_menu()' class='menu'>
+					</div>
+					<div class='logo'>
+					</div>
+					<div class='city' data-toggle='modal' data-target='#city'>
+					<div><strong>Петропавловск-Камчатский</strong></div><div class='arrow'></div>
+					</div>
+				</div>
+				
+				<!-- Small modal -->
+				<div class="modal fade" id='city' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				  <div class="modal-dialog">				  
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="gridSystemModalLabel">Выбор города</h4>
+						</div>					  
+						<div class="modal-body">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-xs-12"><p>Город по профилю: <strong>Город</strong></p></div>
+									<div class="col-xs-12"><p>Город по IP: <strong>Город</strong></p></div>
+									<div class="col-xs-12">Выбор города вручную: <select><option>Выбор города</option></select></div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+							<button type="button" class="btn btn-primary">Сохранить</button>
+						</div>
+					</div>
+				  </div>
+				</div>
+	<!--			
+				<div class='col-xs-3 block_2'>
+					<div class='phone_pic'>
+					</div>
+					<div class='phone_number'>
+					<div>8 800 333 0034<p>Звонок бесплатный</p></div>
+					</div>
+				</div>
+	-->
+				<div unselectable='on' style='display:none' class='col-xs-12 col-sm-6 col-md-5 block_3'>
+					<div class='user'>						
+						<div><img class='avatar' width='38px' height='38px' src='../img/backend/ava2.jpg'></div>
+						<div class='arrow'></div>
+					</div>
+					
+					<div>
+						<span class='custom_btn_buy_active'><img class='pic' src='../img/backend/buy.png'>Мои покупки</span>
+						<span data-toggle='tooltip' data-placement='bottom' class='custom_btn_info' title='Рейтинг 200 179'><img class='pic' src='../img/backend/rating.png'>20 000</span>
+						<span data-toggle='tooltip' data-placement='bottom' title='Energy 19 000' class='custom_btn_info right'><img class='pic' src='../img/backend/energy.png'>19 000</span>
+					</div>
+					
+				</div>
+				
+				<div unselectable='on' class='col-xs-12 col-sm-6 col-md-5 block_3'>
+					<div>
+						<a href='#3'><span class='custom_btn_buy_active create_akk'>Создать аккаунт</span></a>
+						<span class='login_btn' data-toggle='modal' data-target='#login' >Вход</span>						
+					</div>					
+				</div>
+				
+				<!-- Small modal -->
+				<div class="modal fade" id='login' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+				  <div class="modal-dialog modal-sm">				  
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="gridSystemModalLabel">Авторизация</h4>
+						</div>					  
+						<div class="modal-body">
+							<div class="container-fluid">
+								<div>
+									<input>
+									<input>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary">Войти</button>
+						</div>
+					</div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- BEGIN EVENT -->	
+		<div class='top_menu'>	
+			<div class='list'>
+				<div class="menu-wrapper">
+					<ul class="menu">
+						<li>
+							<a href="#">Все мероприятия</a>
+						</li>
+						<li class='active'>
+							<a href="#">Вечеринки</a>
+						</li>
+						<li>
+							<a href="#">Фестивали</a>
+						</li>
+						<li>
+							<a href="#">Концерты</a>
+						</li>
+						<li>
+							<a href="#">Театр</a>
+						</li>
+						<li>
+							<a href="#">Выставки</a>
+						</li>
+						<li>
+							<a href="#">Образование</a>
+						</li>
+						<li>
+							<a href="#">Кино</a>
+						</li>
+						<li>
+							<a href="#">Мода</a>
+						</li>
+						<li>
+							<a href="#">Мода1</a>
+						</li>
+						<li>
+							<a href="#">Мода2</a>
+						</li>
+						<li>
+							<a href="#">Мода3</a>
+						</li>
+						<li>
+							<a href="#">Менюю</a>
+						</li>
+						<li>
+							<a href="#">Менюю222</a>
+						</li>
+						<li>
+							<a href="#">Менюю3</a>
+						</li>
+						<li>
+							<a href="#">Менюю 4</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+		<div class='content'>
+			
+			<div class='banner_top_1'>
+				<img width='100%' src='../img/file/banner_1.jpg'>
+			</div>
+			
+			<div class='after_banner row'>
+				<div class='left col-xs-6'>
+					<h2>Вечеринки</h2>
+					<span>16 мероприятий</span>
+				</div>
+				<div class='right col-xs-6'>					
+					<div class='card'><img src='../img/backend/card.png'></div>
+					<div class='text'><span>КЛУБНЫЕ<br>КАРТЫ</span></div>
+				</div>
+			</div>
+			
+			<div class='hr_line'>
+				<hr>
+			</div>
+			
+			<div class='events'>
+				<div class='row'>
+					<div class='col-xs-9'>
+						<div class='row block_events'>						
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture'>
+										<img width='100%' src='../img/file/afisha.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='timer'>
+										<span>
+										Цена изменится через
+										</span>
+										<span class='right'>
+										1д. 10ч. 20м. 30с.
+										</span>							
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Спектакль имени Васечкина, по книге Красная шапочка
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place' title='Место проведения'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer' title='Организатор'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Купить билет</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='old'>200 Р</span>
+											<span class='new'>150 Р</span>
+											<span class='bonus'>+100 E</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture'>
+										<img width='100%' src='../img/file/afisha.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Спектакль имени Васечкина, по книге
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Записаться</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='new'>Бесплатно</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture horizont'>
+										<img width='100%' src='../img/file/afisha_2.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='timer'>
+										<span>
+										Цена изменится через
+										</span>
+										<span class='right'>
+										1д. 10ч. 20м. 30с.
+										</span>							
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Купить билет</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='new'>250 Р</span>
+											<span class='bonus'>+150 E</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class='row block_events'>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture horizont'>
+										<img width='100%' src='../img/file/afisha_2.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Купить билет</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='old'>200 Р</span>
+											<span class='new'>150 Р</span>
+											<span class='bonus'>+100 E</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture horizont'>
+										<img width='100%' src='../img/file/afisha_2.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Записаться</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='new'>Бесплатно</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture horizont'>
+										<img width='100%' src='../img/file/afisha_2.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014 - 2015 - 2016
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Купить билет</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='new'>250 Р</span>
+											<span class='bonus'>+150 E</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						
+						<div class='row block_events'>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture'>
+										<img width='100%' src='../img/file/afisha.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>
+										
+										<div class='buy'>
+											<span class='btn_buy_active'>Купить билет</span>
+											<span class='bookmark'></span>
+										</div>
+										
+										<div class='cost'>
+											<span class='old'>200 Р</span>
+											<span class='new'>150 Р</span>
+											<span class='bonus'>+100 E</span>
+										</div>
+										
+										
+									</div>
+								</div>
+							</div>
+							<div class='col-xs-4'>
+								<div class='afisha'>
+									<div class='picture horizont'>
+										<img width='100%' src='../img/file/afisha_2.jpg'>
+										<div class='shadow'>
+											<div>										
+												<img width='62px' src='../img/backend/go_events.png'>
+												<div class='text'><span>Посмотреть<br>подробнее</span></div>										
+											</div>
+										</div>
+									</div>
+									<div class='info'>
+										<p class='name'>
+											Клубные СЛИВКИ Барнаула 2014 s ss s s s s s s 
+										</p>
+										<div class='add_space'></div>
+										<p class='date'>
+											3 марта, 22:00
+										</p>
+										<p class='place'>
+											<span class='glyphicon glyphicon-map-marker'></span>Клуб "МОРС"
+										</p>
+										<p class='organizer'>
+											<span class='glyphicon glyphicon-star'></span> POWER
+										</p>										
+										<div class='buy'>
+											<span class='btn_buy_active'>Записаться</span>
+											<span class='bookmark'></span>
+										</div>										
+										<div class='cost'>
+											<span class='new'>Бесплатно</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>	
+					</div>
+					<div class='col-xs-3 sidebar'>
+						<div>
+							<div class='filter'>
+								<span>Дата проведения</span>
+								<select class="form-control">
+									<option>Все время</option>
+									<option>Сегодня</option>
+									<option>Завтра</option>
+									<option>Ближайшая неделя</option>									
+									<option>Последняя неделя</option>
+									<option>Ближайший месяц</option>									
+									<option>Последний месяц</option>
+								</select>
+								
+								<span>Проект</span>
+								<select class="form-control">
+									<option>POWER</option>
+									<option>Сливки</option>
+									<option>Fresh</option>
+								</select>								
+								
+								<span>Место</span>
+								<select class="form-control">
+									<option>МОРС</option>
+									<option>Зеркало</option>
+									<option>Фараон</option>
+								</select>
+								
+							</div>
+							<div class='adds'>
+								<div class='adds_1'>
+									<img width='100%' src='../img/file/adds.jpg'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class='row'>
+					<div class='col-xs-9'>
+						<div class='load'>
+							<span>
+								Показать еще
+							</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	
+		
+		<!-- END -->		
+		
+		
+		<div class='footer'>
+			<div class='row menu_footer'>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#1'>ЧТО ТАКОЕ POWER</a>
+				</div>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#2'>МЕРОПРИЯТИЯ</a>
+				</div>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#3'>МАГАЗИН</a>
+				</div>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#4'>ДИСКОНТ</a>
+				</div>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#5'>СООБЩЕСТВО</a>
+				</div>
+				<div class='col-sm-2 col-xs-6'>
+					<a href='#6'>КЛУБНЫЕ КАРТЫ</a>
+				</div>
+				
+			</div>
+			
+			<div class='row'>
+				<hr>
+				<div class='col-sm-4 col-xs-12 info_1'>
+					Центральный офис компании POWER находится по адресу г. Барнаул ул Ленина, д. 40, офис 8
+				</div>
+				<div class='col-sm-4 col-xs-12 info_2 center_block'>
+						<div class='app_store'></div>
+						<div class='google_play'></div>
+						<div> <span>+7 (961) 999-66-99</span><p>ЗАКАЗАТЬ ЗВОНОК</p></div> 
+				</div>
+				<div class='col-sm-4 col-xs-12 info_3'>
+					2015 POWER. Все права защищены. Использование материалов POWER разрешено только с согласия правообладателей. 
+					<p>Сайт имеет возрастное ограничение 14+</p>
+				</div>
+				
+			</div>
+		</div> 
+		
+	</div> 
+	
+	
+	<div id='Lmenu' class='left_menu'>
+		<div class='row'>
+			<div class='col-xs-9 col-xs-offset-3 first_line'>
+				<div class='logo'>
+				</div>
+				<div onclick='left_menu()' class='menu'>
+				</div>				
+			</div>
+		</div>
+		
+		<div class='row line'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>				
+				<hr>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>				
+				<a href='#tv'>POWER TV</a>
+			</div>
+		</div>
+			
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<a href='#faq'>ЧТО ТАКОЕ POWER</a>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-3'>
+				<div class='blue color_block'>
+				</div>
+			</div>
+			<div class='col-xs-9 item_menu'>					
+				<span>МЕРОПРИЯТИЯ</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-3'>
+				<div class='red color_block'>
+				</div>
+			</div>
+			<div class='col-xs-9 item_menu'>					
+				<span>МАГАЗИН</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-3'>
+				<div class='orange color_block'>
+				</div>
+			</div>
+			<div class='col-xs-9 item_menu'>					
+				<span>ДИСКОНТ</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-3'>
+				<div class='green color_block'>
+				</div>
+			</div>
+			<div class='col-xs-9 item_menu'>					
+				<span>СООБЩЕСТВО</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-3'>
+				<div class='black color_block'>
+				</div>
+			</div>
+			<div class='col-xs-9 item_menu'>					
+				<span>КЛУБНЫЕ КАРТЫ</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<span>ПРОЕКТЫ</span>
+			</div>
+		</div>
+				
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<span>МЕСТА</span>
+			</div>
+		</div>
+				
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<span>ОТЧЕТЫ</span>
+			</div>
+		</div>
+				
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<span>ШКОЛА ПРОМОУШЕНА</span>
+			</div>
+		</div>
+		
+		<div class='row items_menu'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>					
+				<span>БАЗА ЗНАНИЙ</span>
+			</div>
+		</div>
+				
+		<div class='row line'>
+			<div class='col-xs-9 item_menu col-xs-offset-3'>	
+				<hr>
+			</div>
+		</div>
+		
+		<div class='row'>
+			<div class='col-xs-9 item_menu col-xs-offset-3 social'>					
+				<div class='fb'>
+					<a href='#fb'></a>
+				</div>
+				<div class='vk'>
+					<a href='#vk'></a>
+				</div>
+				<div class='ok'>
+					<a href='#ok'></a>
+				</div>
+				<div class='tw'>
+					<a href='#tw'></a>
+				</div>
+				<div class='youtube'>
+					<a href='#youtube'></a>
+				</div>
+				<div class='inst'>
+					<a href='#inst'></a>
+				</div>				
+			</div>
+		</div>
+		
+	</div>
+    
+	<div id='menu_fon' onclick='left_menu()' class="menu_fon"></div>
+<!-- 	<div id='menu_fon' class="menu_fon modal-backdrop fade in"></div> -->
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+		  $('[data-toggle="tooltip"]').tooltip()
+		})
+		
+		function left_menu()
+		{
+			$('#Lmenu').toggle();
+			$('#menu_fon').toggle();
+		}
+		
+		function fixed_events_afisha(n)
+		{
+			var height_1 = $('.events .block_events:eq('+n+') .afisha:eq(0) .picture').height();
+			var height_2 = $('.events .block_events:eq('+n+') .afisha:eq(1) .picture').height();
+			var height_3 = $('.events .block_events:eq('+n+') .afisha:eq(2) .picture').height();
+			
+			var max_height = Math.max(height_1, height_2);
+			max_height = Math.max(max_height, height_3);
+						
+			var height = $('.events .block_events:eq('+n+') .horizont').height();
+			
+			var add_px = (max_height - height) / 2;
+			if(add_px!=0) $('.events .block_events:eq('+n+') .horizont > img').css({"margin-top": add_px+"px", "margin-bottom": add_px+"px"});			
+		}
+		
+		function fixed_events_name(n)
+		{
+			var height_1 = $('.events .block_events:eq('+n+') .afisha:eq(0)').height();
+			var height_2 = $('.events .block_events:eq('+n+') .afisha:eq(1)').height();
+			var height_3 = $('.events .block_events:eq('+n+') .afisha:eq(2)').height();
+			var add_px;
+			
+			var max_height = Math.max(height_1, height_2);
+			max_height = Math.max(max_height, height_3);
+			
+			//console.log("Max height " + height_1);   
+			//console.log("Max height " + max_height);   
+			
+			if(height_1 < max_height)  
+			{
+				add_px = (max_height + 2 - height_1) / 2;
+				$('.events .block_events:eq('+n+') .afisha:eq(0) .add_space').css("height", add_px+"px");			
+			}
+			
+			if(height_2 < max_height)  
+			{
+				add_px = (max_height + 2 - height_2) / 2;
+				$('.events .block_events:eq('+n+') .afisha:eq(1) .add_space').css("height", add_px+"px");		
+			}
+			
+			if(height_3 < max_height)  
+			{
+				add_px = (max_height + 2 - height_3) / 2 ;
+				$('.events .block_events:eq('+n+') .afisha:eq(2) .add_space').css("height", add_px+"px");
+			}			
+					
+		}
+		
+		
+		function fixed_project_name(n)
+		{
+			var height_1 = $('.events .block_projects:eq('+n+') .afisha:eq(0)').height();
+			var height_2 = $('.events .block_projects:eq('+n+') .afisha:eq(1)').height();
+			var add_px;
+			
+			var max_height = Math.max(height_1, height_2);
+			
+			console.log("Max height " + height_1);   
+			console.log("Max height " + max_height);   
+			
+			if(height_1 < max_height)  
+			{
+				add_px = (max_height + 2 - height_1) / 2;
+				$('.events .block_projects:eq('+n+') .afisha:eq(0) .add_space').css("height", add_px+"px");			
+			}
+			
+			if(height_2 < max_height)  
+			{
+				add_px = (max_height + 2 - height_2) / 2;
+				$('.events .block_projects:eq('+n+') .afisha:eq(1) .add_space').css("height", add_px+"px");		
+			}
+			
+					
+		}
+		
+		/*
+			Обработка верхнего меню. Если все элементы не влезают в отведенное им место, то лишние элементы помещаются под пункт "Еще", который предварительно добавляется к списку.
+		*/
+		function fixed_top_menu()
+		{
+			var col, obj, width_parent, width_menu, diff;
+			width_parent = $('.top_menu .list').width();
+			width_menu = $('.top_menu .menu-wrapper').width();			
+			diff = width_parent - width_menu;
+						
+			if( diff < 0 )
+			{
+				 $('.top_menu .menu-wrapper li:last').after('<li><a href="#">Еще</a><ul class="sub_menu"></ul></li>');
+			}
+									
+			while( diff < 0 )
+			{
+				col = $('.top_menu .menu > li').length - 2;
+				obj = $('.top_menu .menu li:eq('+col+')').html();
+				
+				$('.top_menu .menu li:eq('+col+')').remove();	
+				$('.top_menu .sub_menu').prepend('<li>'+obj+'</li>');
+				
+				width_menu = $('.top_menu .menu-wrapper').width();
+				diff = width_parent - width_menu;
+				
+				console.log("Разница: " + diff + " и номер объекта " + col + "( " + width_parent + "/" + width_menu +" )"); 
+			}
+			
+		}
+		
+		$(document).ready(function() {
+			//console.log("Вызвана функция ready. Счетчик картинок: " + countImgElements());   
+			//$('.events .row:eq(2) .afisha:eq(2) .name').text('777');
+			
+			
+			//страница мероприятий
+			
+			var col = $('.events .row').length;
+			for(i=0; i<col; i++)
+			{
+				fixed_events_afisha(i);
+				fixed_events_name(i);
+			}
+			
+			
+			//страница проектов, база знаний
+			var col = $('.events .block_projects').length;
+			for(i=0; i<col; i++)
+			{
+				fixed_project_name(i);
+			}
+			
+			/* power_tv */
+			$('.events .youtube_video iframe').css("height", ($('.events .youtube_video iframe').width() / 1.77777)+"px");	
+			
+			/* подгон верхнего меню*/
+			fixed_top_menu();
+		});
+	
+	</script>
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	<link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<script>
+		/*reports_inside*/
+		/*
+		$(document).ready(function() {
+			$(".fancybox-thumb").fancybox({
+				prevEffect	: 'none',
+				nextEffect	: 'none',
+				padding	: [5, 0, 0, 0],
+				title : '<div class="footer_photo"><span title="Сохранить" class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> <span class="count_photo">1/10 фото</span><span class="soc_icon vk_logo"></span><span class="soc_icon vk_logo"></span><span class="soc_icon vk_logo"></span></div>',
+				helpers	: {
+					title	: {
+						type: 'inside'
+					},
+					thumbs	: {
+						width	: 100,
+						height	: 100
+					}
+				}
+			});
+		});
+		*/
+		/* power tv */
+		$(document).ready(function() {
+			$('.fancybox-media').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+				helpers : {
+					media : {}
+				}
+			});
+		});
+	</script>
+  </body>
+</html>
